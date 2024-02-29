@@ -7,7 +7,7 @@ public class ValidatePalindrom {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter the tested word: ");
         String word = scanner.nextLine().toLowerCase().replaceAll("[^\\\\sa-zA-Z0-9]", "");
-//        System.out.println(word);
+        //System.out.println(word);
         Stack<Character> myCharWord = new Stack<Character>();
         Stack<Character> myCharWordRev = new Stack<Character>();
 
@@ -25,10 +25,10 @@ public class ValidatePalindrom {
 
         for (int c = 0; c<myCharWordRev.size(); c++) {
             if (myCharWord.push(myCharWordRev.pop()).equals(myCharWordRev.elementAt(c))) {
-                System.out.println("yes");
+                System.out.println("True");
                 return flag;
             } else {
-                System.out.println("no");
+                System.out.println("False");
                 flag = false;
                 return flag;
             }
